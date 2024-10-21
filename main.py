@@ -287,3 +287,10 @@ if selected_customer_option:
                      selected_customer_surname))
 
   st.markdown("---")
+
+
+# Get the port from the environment (Render provides it dynamically)
+port = os.environ.get('PORT', 8501)
+
+# Use os.system to run Streamlit with the correct port
+os.system(f"streamlit run main.py --server.port {port}")
