@@ -67,7 +67,7 @@ def explain_prediction(probability, input_dict, surname):
 
   print("EXPLANATION PROMPT", prompt)
 
-  raw_response = client.chat.completions.create(model="llama-3.1-8b-instant",
+  raw_response = client.chat.completions.create(model="llama-3.1-70b-versatile",
                                                 messages=[
                                                     {
                                                         "role": "user",
@@ -104,7 +104,7 @@ def generate_email(probability, input_dict, explanation, surname):
   If you decide to use bullet points, make them one seperate lines for readability.
   """
 
-  raw_response = client.chat.completions.create(model="llama-3.1-8b-instant",
+  raw_response = client.chat.completions.create(model="llama-3.1-70b-versatile",
                                                 messages=[
                                                     {
                                                         "role": "user",
